@@ -1,0 +1,52 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.intel.ile.java8</groupId>
+	<artifactId>algorithms-multimodule</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<name>algorithms-multimodule</name>
+	<description>algorithms-multimodule</description>
+
+	<modules>
+		<module>algorithms-one-module</module>
+		<module>algorithms-two-module</module>
+	</modules>
+
+	<organization>
+		<name>Intel Corporation</name>
+		<url>www.intel.com</url>
+	</organization>
+	<developers>
+		<developer>
+			<id>scafiero</id>
+			<name>Simone Cafiero</name>
+			<email>simone.cafiero@intel.com</email>
+		</developer>
+	</developers>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+
+				<!-- Maven Plugin needed to compile Java sources -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<configuration>
+						<fork>true</fork>
+						<meminitial>1024m</meminitial>
+						<maxmem>2048m</maxmem>
+						<source>1.8</source>
+						<target>1.8</target>
+						<encoding>UTF8</encoding>
+					</configuration>
+				</plugin>
+
+			</plugins>
+		</pluginManagement>
+	</build>
+	
+</project>
